@@ -76,12 +76,12 @@ h2{font-size:clamp(3rem,7.4vw,6.6rem);margin-top:18px}
 /* nav */
 .nav{position:absolute;top:0;left:0;right:0;z-index:5;color:var(--white)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:22px}
-.nav .brand img{height:58px;width:auto}
+.nav .brand{flex:none}.nav .brand img{height:58px;width:auto}
 .nav ul{display:flex;gap:clamp(18px,2.6vw,38px);list-style:none}
 .nav ul a{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
 .nav ul a:hover{border-bottom-color:currentColor}
 .nav .btn{padding:12px 16px;font-size:12px}
-@media(max-width:940px){.nav ul{display:none}}
+@media(max-width:1100px){.nav ul{display:none}}
 @media(max-width:480px){.nav .brand img{height:46px}.nav .btn span.long{display:none}}
 
 /* hero */
@@ -251,6 +251,34 @@ footer a:hover{color:#fff}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* site menu */
+.nav .menu{align-items:center}
+.nav .menu a[aria-current]{border-bottom-color:currentColor}
+.nav .menu button.subbtn{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:none;border:0;border-bottom:1px solid transparent;color:inherit;padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.nav .menu button.subbtn::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.has-sub{position:relative}
+.sub{position:absolute;top:100%;left:-18px;min-width:210px;background:var(--ink);border:1px solid var(--rule-dark);padding:8px 0;display:none;flex-direction:column;z-index:6}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{display:flex}
+.nav .sub a{display:block;padding:11px 18px;border-bottom:0}
+.nav .sub a:hover{background:var(--white);color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:10px;flex:none}
+.burger{display:none;width:46px;height:46px;border:1.5px solid var(--white);background:transparent;color:var(--white);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0}
+.burger i{display:block;width:20px;height:1.5px;background:currentColor;transition:transform .2s,opacity .2s}
+.nav.open .burger i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav.open .burger i:nth-child(2){opacity:0}
+.nav.open .burger i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:1100px){
+  .burger{display:inline-flex}
+  .nav.open{background:var(--ink)}
+  .nav.open .menu{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:4px var(--gutter) 28px;border-bottom:1px solid var(--rule-dark)}
+  .nav .menu>li>a,.nav .menu button.subbtn{display:flex;width:100%;justify-content:space-between;font-size:14px;padding:17px 0;border-bottom:1px solid var(--rule-dark)}
+  .nav .menu a[aria-current]{border-bottom-color:var(--rule-dark)}
+  .sub{position:static;display:flex;border:0;padding:0 0 0 18px;min-width:0}
+  .nav .sub a{padding:14px 0;font-size:13px;border-bottom:1px solid var(--rule-dark);color:#c9c9c5}
+  .nav .menu button.subbtn{cursor:default}
+  .nav .menu button.subbtn::after{display:none}
+}
 </style>
 </head>
 <body>
@@ -258,18 +286,27 @@ footer a:hover{color:#fff}
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Dingo Transport LLC home"><img src="img/logo-white.png" alt="Dingo Transport LLC, Dodge City, KS" width="876" height="443"></a>
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#teams">Teams</a></li>
-      <li><a href="#coverage">Coverage</a></li>
-      <li><a href="#fleet">Fleet</a></li>
-      <li><a href="#brokers">Brokers</a></li>
+    <ul class="menu" id="site-menu">
+      <li><a href="#top" aria-current="page">Home</a></li>
+      <li class="has-sub"><button class="subbtn" type="button" id="about-btn" aria-expanded="false">About</button>
+        <div class="sub">
+          <a href="#services">Services</a>
+          <a href="#teams">Teams</a>
+          <a href="#coverage">Coverage</a>
+          <a href="#fleet">Fleet</a>
+        </div>
+      </li>
+      <li><a href="brokers/">For Brokers</a></li>
+      <li><a href="drive/">Drive for Dingo</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="btn solid" href="tel:+16824109850">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-      <span class="long">Dispatch&nbsp;</span>682.410.9850
-    </a>
+    <div class="nav-right">
+      <a class="btn solid" href="tel:+16824109850">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="long">Dispatch&nbsp;</span>682.410.9850
+      </a>
+      <button class="burger" type="button" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><i></i><i></i><i></i></button>
+    </div>
   </div>
 </header>
 
@@ -453,6 +490,7 @@ footer a:hover{color:#fff}
       <div>Bison</div>
     </div>
     <p class="also">Plus years of experience hauling Amazon freight.</p>
+    <p style="margin-top:28px"><a class="btn solid" href="brokers/">Broker info and carrier packet</a></p>
 
     <figure class="review">
       <div class="q" aria-hidden="true">&ldquo;</div>
@@ -506,7 +544,7 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <img src="img/logo-white.png" alt="Dingo Transport LLC" width="876" height="443">
     <nav aria-label="Footer">
-      <a href="#services">Services</a><a href="#teams">Teams</a><a href="#coverage">Coverage</a><a href="#fleet">Fleet</a><a href="#brokers">Brokers</a><a href="#contact">Contact</a>
+      <a href="#top">Home</a><a href="#services">Services</a><a href="#coverage">Coverage</a><a href="brokers/">For Brokers</a><a href="drive/">Drive for Dingo</a><a href="#contact">Contact</a>
     </nav>
     <span>&copy; 2026 Dingo Transport LLC &middot; Dodge City, KS</span>
   </div>
@@ -521,6 +559,16 @@ document.querySelectorAll('.copy').forEach(function(b){
     catch(e){done('Select and copy above')}
   });
 });
+</script>
+<script id="menu-js">
+(function(){
+  var nav=document.querySelector('.nav'),b=document.getElementById('menu-btn'),sb=document.getElementById('about-btn');
+  var set=function(o){nav.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')};
+  b.addEventListener('click',function(){set(!nav.classList.contains('open'))});
+  sb.addEventListener('click',function(){var li=sb.parentNode,o=!li.classList.contains('open');li.classList.toggle('open',o);sb.setAttribute('aria-expanded',o)});
+  nav.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){set(false);sb.parentNode.classList.remove('open')}});
+})();
 </script>
 </body>
 </html>

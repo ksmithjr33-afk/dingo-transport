@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drive for Dingo Transport</title>
+<meta name="description" content="Dingo Transport is looking for Class A CDL team and solo drivers. 53 foot dry van, U.S. Mail and expedited freight out of Dodge City, Kansas.">
+<link rel="icon" href="../img/wolf-black.png">
+<link rel="canonical" href="https://dingotransport.com/drive/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dingo Transport LLC">
+<meta property="og:url" content="https://dingotransport.com/drive/">
+<meta property="og:title" content="Drive for Dingo | Teams and Solos Wanted">
+<meta property="og:description" content="Team and solo drivers wanted for OTR and regional work. 53 foot dry van, U.S. Mail and expedited freight. Call 682.410.9850 to apply.">
+<meta property="og:image" content="https://raw.githubusercontent.com/ksmithjr33-afk/dingo-transport/main/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ksmithjr33-afk/dingo-transport/main/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: black and white only, like the door decal. Giant condensed signage type,
+   hairline rules, and spec plate labels in mono. Sections alternate black and paper. */
+:root{
+  --ink:#0a0a0a;
+  --asphalt:#151515;
+  --paper:#f3f3f0;
+  --white:#ffffff;
+  --steel:#8b8b87;
+  --rule-dark:rgba(255,255,255,.16);
+  --rule-light:rgba(10,10,10,.16);
+  --display:"Big Shoulders Display","Haettenschweiler","Impact","Arial Narrow",sans-serif;
+  --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --gutter:clamp(20px,5vw,72px);
+  --max:1320px;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.9;letter-spacing:.005em;text-wrap:balance}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+.dark{background:var(--ink);color:var(--white)}
+.light{background:var(--paper);color:var(--ink)}
+section{padding-block:clamp(72px,10vw,140px)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.label::before{content:"";width:28px;height:1px;background:currentColor}
+.dark .label{color:#c9c9c5}
+.light .label{color:#4a4a47}
+h2{font-size:clamp(3rem,7.4vw,6.6rem);margin-top:18px}
+.lede{font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:56ch}
+.dark .lede{color:#d4d4d0}
+.light .lede{color:#33332f}
+.head{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(40px,6vw,80px)}
+@media(max-width:860px){.head{grid-template-columns:1fr}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:17px 22px;border:1.5px solid currentColor;background:transparent;color:inherit;cursor:pointer;transition:background .2s,color .2s}
+.btn svg{width:16px;height:16px;flex:none}
+.btn.solid{background:var(--white);color:var(--ink);border-color:var(--white)}
+.btn.solid:hover{background:transparent;color:var(--white)}
+.btn.ghost:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
+.light .btn.solid{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.light .btn.solid:hover{background:transparent;color:var(--ink)}
+.light .btn.ghost:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+
+/* nav */
+.nav{position:absolute;top:0;left:0;right:0;z-index:5;color:var(--white)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:22px}
+.nav .brand{flex:none}.nav .brand img{height:58px;width:auto}
+.nav ul{display:flex;gap:clamp(18px,2.6vw,38px);list-style:none}
+.nav ul a{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
+.nav ul a:hover{border-bottom-color:currentColor}
+.nav .btn{padding:12px 16px;font-size:12px}
+@media(max-width:1100px){.nav ul{display:none}}
+@media(max-width:480px){.nav .brand img{height:46px}.nav .btn span.long{display:none}}
+
+/* hero */
+.hero{position:relative;background:#000;color:var(--white);isolation:isolate;overflow:hidden;padding:0}
+.hero .photo{position:absolute;inset:0;z-index:-2}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.42) 34%,rgba(0,0,0,.08) 52%,rgba(0,0,0,.2) 66%,rgba(0,0,0,.94) 100%)}
+.hero .wrap{min-height:clamp(700px,60vw,900px);display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding-top:clamp(118px,11vw,150px);padding-bottom:clamp(28px,4vw,48px)}
+.hero h1{font-size:clamp(3rem,11.2vw,10.4rem);line-height:.84;margin-top:16px}
+.hero h1 span{display:block;overflow:hidden;padding-top:.04em}
+.hero h1 span i{display:block;font-style:normal;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 span:nth-child(2) i{animation-delay:.12s}
+.hero h1 .hollow i{color:transparent;-webkit-text-stroke:1.5px var(--white)}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+.hero .foot{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.hero .foot p{max-width:46ch;font-size:clamp(1rem,1.4vw,1.2rem);color:#ececea}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:860px){.hero .foot{grid-template-columns:1fr}.hero .photo img{object-position:30% 0}}
+
+/* stat strip */
+.stats{background:var(--ink);color:var(--white);border-top:1px solid var(--rule-dark)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 24px 30px 0;border-right:1px solid var(--rule-dark);display:flex;flex-direction:column;gap:6px}
+.stat+.stat{padding-left:24px}
+.stat:last-child{border-right:0}
+.stat b{font-family:var(--display);font-weight:900;font-size:clamp(3rem,6vw,5.4rem);line-height:.85;font-variant-numeric:tabular-nums}
+.stat span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#bdbdb9}
+@media(max-width:720px){.stats .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--rule-dark)}.stat:nth-child(3){padding-left:0}}
+
+/* ticker */
+.ticker{background:var(--white);color:var(--ink);overflow:hidden;border-block:1px solid var(--ink)}
+.ticker .track{display:flex;width:max-content;animation:slide 38s linear infinite}
+.ticker ul{display:flex;list-style:none;flex:none}
+.ticker li{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,2.6vw,2.2rem);text-transform:uppercase;padding:14px 0;display:flex;align-items:center;white-space:nowrap}
+.ticker li::after{content:"";width:22px;height:27px;margin-inline:28px;background:url(../img/wolf-black.png) center/contain no-repeat}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* services */
+.rows{border-top:1.5px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) auto;gap:clamp(16px,4vw,56px);align-items:center;padding:clamp(26px,3.6vw,44px) 0;border-bottom:1.5px solid var(--ink);transition:background .25s,color .25s,padding .25s}
+.row h3{font-size:clamp(2.2rem,5vw,4.4rem)}
+.row p{max-width:50ch;color:#33332f;transition:color .25s}
+.row .tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid currentColor;padding:7px 10px;white-space:nowrap}
+.row:hover{background:var(--ink);color:var(--white);padding-inline:clamp(14px,2vw,28px)}
+.row:hover p{color:#d9d9d5}
+@media(max-width:860px){.row{grid-template-columns:1fr;gap:12px}.row .tag{justify-self:start}}
+.freight{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:clamp(48px,7vw,96px);border:1.5px solid var(--ink)}
+.freight>div{padding:clamp(24px,3.4vw,44px)}
+.freight .no{background:var(--ink);color:var(--white)}
+.freight h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.freight ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.freight li{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,3.2vw,2.7rem);text-transform:uppercase;line-height:1}
+.freight .no li{color:transparent;-webkit-text-stroke:1px #fff;text-decoration:line-through;text-decoration-color:#fff;text-decoration-thickness:2px}
+.freight small{display:block;margin-top:18px;font-size:14px;color:#c9c9c5}
+.freight .yes small{color:#4a4a47}
+@media(max-width:720px){.freight{grid-template-columns:1fr}}
+
+/* teams */
+.crew{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px)}
+.crew article{border-top:1.5px solid var(--white);padding-top:24px;display:flex;flex-direction:column;gap:16px}
+.crew .count{display:flex;align-items:baseline;gap:16px}
+.crew .count b{font-family:var(--display);font-weight:900;font-size:clamp(5rem,11vw,9.5rem);line-height:.8}
+.crew .count h3{font-size:clamp(1.8rem,3.4vw,2.8rem)}
+.crew p{color:#d4d4d0;max-width:48ch}
+.clock{margin-top:8px}
+.clock .bar{display:grid;grid-template-columns:repeat(24,1fr);height:34px;border:1.5px solid var(--white)}
+.clock .bar i{border-right:1px solid rgba(255,255,255,.22)}
+.clock .bar i:last-child{border-right:0}
+.clock .bar .a{background:var(--white)}
+.clock .bar .b{background:#8b8b87}
+.clock .bar .off{background:repeating-linear-gradient(45deg,transparent 0 4px,rgba(255,255,255,.28) 4px 5px)}
+.clock .key{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#bdbdb9}
+.clock .key span{display:flex;align-items:center;gap:8px}
+.clock .key span::before{content:"";width:12px;height:12px;border:1px solid #fff}
+.clock .key .ka::before{background:#fff}.clock .key .kb::before{background:#8b8b87}
+.clock .key .ko::before{background:repeating-linear-gradient(45deg,transparent 0 3px,rgba(255,255,255,.5) 3px 4px)}
+.fine{margin-top:clamp(32px,4vw,48px);font-size:13px;color:#a3a39f;max-width:80ch}
+@media(max-width:860px){.crew{grid-template-columns:1fr}}
+
+/* coverage */
+.cover{display:grid;grid-template-columns:.8fr 1.5fr;gap:clamp(24px,5vw,72px);align-items:center}
+.cover .lede{margin-top:22px}
+.regions{list-style:none;margin-top:28px;border-top:1.5px solid var(--ink)}
+.regions li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule-light);font-family:var(--display);font-weight:800;font-size:1.55rem;text-transform:uppercase;line-height:1.1}
+.regions li span{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.12em;align-self:center;white-space:nowrap}
+.regions li.out{color:#77776f}
+.map{width:100%;height:auto;display:block}
+.map .st-on path{fill:var(--ink);stroke:var(--paper);stroke-width:1.1;transition:fill .15s}
+.map .st-on path:hover{fill:#3a3a38}
+.map .st-off path{fill:url(#hatch);stroke:var(--ink);stroke-width:1;stroke-dasharray:3 3}
+.map .hatchline{stroke:rgba(10,10,10,.34);stroke-width:1.2}
+.map .lanes path{fill:none;stroke:#fff;stroke-width:1.6;stroke-dasharray:5 7;stroke-linecap:round;animation:march 1.6s linear infinite}
+@keyframes march{to{stroke-dashoffset:-24}}
+.map .dots circle{fill:#fff}
+.map .home circle{fill:#fff}
+.map .home .pulse{fill:none;stroke:#fff;stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.5);opacity:1}100%{transform:scale(1.9);opacity:0}}
+.map .home rect{fill:#fff}
+.map .home text{font-family:var(--mono);font-size:11px;letter-spacing:.1em;fill:var(--ink);font-weight:500}
+.legend{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4a4a47}
+.legend span{display:flex;align-items:center;gap:9px}
+.legend span::before{content:"";width:16px;height:16px;border:1px solid var(--ink)}
+.legend .l1::before{background:var(--ink)}
+.legend .l2::before{background:repeating-linear-gradient(45deg,transparent 0 3px,rgba(10,10,10,.45) 3px 4px);border-style:dashed}
+@media(max-width:940px){.cover{grid-template-columns:1fr}}
+
+/* fleet */
+.fleet{padding:0}
+.fleet .grid{display:grid;grid-template-columns:1.25fr 1fr}
+.fleet figure{position:relative;min-height:420px;overflow:hidden}
+.fleet figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.fleet figure:hover img{transform:scale(1.035)}
+.fleet figcaption{position:absolute;left:0;bottom:0;background:var(--white);color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:10px 14px}
+.fleet .spec{padding:clamp(48px,7vw,110px) var(--gutter);display:flex;flex-direction:column;justify-content:center}
+.plate{margin-top:36px;border:1.5px solid var(--white);border-radius:14px;padding:6px 22px}
+.plate div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--rule-dark);font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.plate div:last-child{border-bottom:0}
+.plate dt{color:#a3a39f}
+.plate dd{text-align:right}
+@media(max-width:940px){.fleet .grid{grid-template-columns:1fr}.fleet figure{min-height:0;aspect-ratio:4/3}}
+
+/* partners + review */
+.marks{display:grid;grid-template-columns:repeat(5,1fr);border:1.5px solid var(--ink)}
+.marks div{min-width:0;padding:clamp(22px,3vw,40px) 12px;display:grid;place-items:center;text-align:center;border-right:1.5px solid var(--ink);font-family:var(--display);font-weight:900;font-size:clamp(1.5rem,2.5vw,2.3rem);text-transform:uppercase;line-height:1;transition:background .2s,color .2s}
+.marks div:last-child{border-right:0}
+.marks div:hover{background:var(--ink);color:var(--white)}
+.also{margin-top:16px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#4a4a47}
+@media(max-width:860px){.marks{grid-template-columns:1fr 1fr}.marks div{font-size:1.35rem}.marks div{border-right:0;border-bottom:1.5px solid var(--ink)}.marks div:nth-child(odd){border-right:1.5px solid var(--ink)}.marks div:last-child{grid-column:1/-1;border-bottom:0;border-right:0}}
+.review{margin-top:clamp(64px,9vw,120px);display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,56px);align-items:start}
+.review .q{font-family:var(--display);font-weight:900;font-size:clamp(6rem,14vw,12rem);line-height:.7;padding-top:.12em}
+.review blockquote{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2.1rem,5vw,4.4rem);line-height:.96;text-wrap:balance}
+.review cite{display:flex;align-items:center;gap:14px;margin-top:26px;font-family:var(--mono);font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.review .stars{letter-spacing:.2em;font-size:14px}
+@media(max-width:600px){.review{grid-template-columns:1fr}.review .q{font-size:5rem}}
+
+/* story */
+.story .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,6vw,96px);align-items:center}
+.story .wolf{width:clamp(150px,24vw,330px);height:auto}
+.story p{color:#d4d4d0;font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:54ch;margin-top:22px}
+.story p+p{margin-top:14px}
+@media(max-width:720px){.story .wrap{grid-template-columns:1fr}.story .wolf{width:130px}}
+
+/* contact */
+.contact h2{font-size:clamp(3.4rem,10.5vw,10rem);line-height:.84}
+.phone{display:inline-block;font-family:var(--display);font-weight:900;font-size:clamp(3.4rem,12.4vw,12rem);line-height:.9;text-decoration:none;margin-top:clamp(20px,3vw,36px);font-variant-numeric:tabular-nums;background:linear-gradient(currentColor,currentColor) 0 100%/0 .06em no-repeat;transition:background-size .5s cubic-bezier(.2,.8,.2,1)}
+.phone:hover{background-size:100% .06em}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(40px,6vw,72px);border-top:1.5px solid var(--ink)}
+.cgrid>div{padding:26px 24px 0 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.cgrid>div+div{padding-left:24px;border-left:1px solid var(--rule-light)}
+.cgrid h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#4a4a47}
+.cgrid .big{font-size:clamp(1.05rem,1.6vw,1.3rem);font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.cgrid a.big:hover{text-decoration:underline}
+.copy{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:none;border:1px solid var(--ink);color:var(--ink);padding:6px 10px;cursor:pointer}
+.copy:hover{background:var(--ink);color:var(--white)}
+@media(max-width:860px){.cgrid{grid-template-columns:1fr}.cgrid>div,.cgrid>div+div{padding:22px 0;border-left:0;border-bottom:1px solid var(--rule-light)}}
+
+/* footer */
+footer{background:var(--ink);color:#bdbdb9;padding-block:44px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px 40px;align-items:center;justify-content:space-between}
+footer img{height:64px;width:auto}
+footer nav{display:flex;flex-wrap:wrap;gap:10px 26px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* drive page */
+.hero.drive .photo img{object-position:100% 35%}
+.hero.drive::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.6) 40%,rgba(0,0,0,0) 75%)}
+@media(max-width:860px){.hero.drive .photo img{object-position:78% 0}.hero.drive::after{background:rgba(0,0,0,.45)}}
+.crew .ask{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#bdbdb9;border-top:1px solid var(--rule-dark);padding-top:14px;margin-top:4px}
+.need{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,80px);align-items:start}
+.need .regions{margin-top:0}
+.need .note{margin-top:22px;font-size:15px;color:#4a4a47;max-width:52ch}
+@media(max-width:860px){.need{grid-template-columns:1fr}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--white)}
+.steps li{list-style:none;padding:26px 24px 0 0;display:flex;flex-direction:column;gap:10px}
+.steps li+li{padding-left:24px;border-left:1px solid var(--rule-dark)}
+.steps b{font-family:var(--display);font-weight:900;font-size:clamp(4rem,8vw,7rem);line-height:.8;color:transparent;-webkit-text-stroke:1.5px #fff}
+.steps h3{font-size:clamp(1.7rem,3vw,2.5rem)}
+.steps p{color:#d4d4d0;max-width:36ch}
+@media(max-width:860px){.steps{grid-template-columns:1fr}.steps li,.steps li+li{padding:22px 0;border-left:0;border-bottom:1px solid var(--rule-dark)}}
+.apply{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,80px);align-items:start}
+.apply .side p{margin-top:20px}
+.apply .side .phone{font-size:clamp(2.6rem,5vw,4.4rem);margin-top:26px}
+.apply .side small{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#4a4a47;overflow-wrap:anywhere}
+@media(max-width:940px){.apply{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:20px 20px;border:1.5px solid var(--ink);padding:clamp(20px,3.4vw,40px);background:var(--white)}
+form .full{grid-column:1/-1}
+form label,form legend{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#33332f;margin-bottom:8px}
+form input[type=text],form input[type=tel],form input[type=email],form select,form textarea{width:100%;font:500 16px/1.4 var(--body);color:var(--ink);background:var(--paper);border:1.5px solid var(--ink);border-radius:0;padding:13px 14px;-webkit-appearance:none;appearance:none}
+form select{background-image:linear-gradient(45deg,transparent 50%,#0a0a0a 50%),linear-gradient(135deg,#0a0a0a 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+form textarea{min-height:84px;resize:vertical}
+form fieldset{border:0;min-width:0}
+.choices{display:flex;flex-wrap:wrap;gap:10px}
+.choices label{margin:0;position:relative;cursor:pointer}
+.choices input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.choices span{display:block;border:1.5px solid var(--ink);padding:12px 16px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--ink)}
+.choices input:checked+span{background:var(--ink);color:var(--white)}
+.choices input:focus-visible+span{outline:3px solid var(--ink);outline-offset:3px}
+form .btn{justify-content:center;font-size:14px;padding:19px 22px}
+form .hint{font-size:14px;color:#4a4a47}
+.sent{grid-column:1/-1;border:1.5px dashed var(--ink);padding:18px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.sent[hidden]{display:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.done{grid-column:1/-1;display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:clamp(8px,2vw,24px) 0}
+.done h3{font-size:clamp(2.4rem,5vw,4rem)}
+.done p{max-width:44ch;color:#33332f}
+.sent pre{font:400 13px/1.5 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere;width:100%;background:var(--paper);padding:14px}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+
+/* site menu */
+.nav .menu{align-items:center}
+.nav .menu a[aria-current]{border-bottom-color:currentColor}
+.nav .menu button.subbtn{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:none;border:0;border-bottom:1px solid transparent;color:inherit;padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.nav .menu button.subbtn::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.has-sub{position:relative}
+.sub{position:absolute;top:100%;left:-18px;min-width:210px;background:var(--ink);border:1px solid var(--rule-dark);padding:8px 0;display:none;flex-direction:column;z-index:6}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{display:flex}
+.nav .sub a{display:block;padding:11px 18px;border-bottom:0}
+.nav .sub a:hover{background:var(--white);color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:10px;flex:none}
+.burger{display:none;width:46px;height:46px;border:1.5px solid var(--white);background:transparent;color:var(--white);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0}
+.burger i{display:block;width:20px;height:1.5px;background:currentColor;transition:transform .2s,opacity .2s}
+.nav.open .burger i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav.open .burger i:nth-child(2){opacity:0}
+.nav.open .burger i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:1100px){
+  .burger{display:inline-flex}
+  .nav.open{background:var(--ink)}
+  .nav.open .menu{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:4px var(--gutter) 28px;border-bottom:1px solid var(--rule-dark)}
+  .nav .menu>li>a,.nav .menu button.subbtn{display:flex;width:100%;justify-content:space-between;font-size:14px;padding:17px 0;border-bottom:1px solid var(--rule-dark)}
+  .nav .menu a[aria-current]{border-bottom-color:var(--rule-dark)}
+  .sub{position:static;display:flex;border:0;padding:0 0 0 18px;min-width:0}
+  .nav .sub a{padding:14px 0;font-size:13px;border-bottom:1px solid var(--rule-dark);color:#c9c9c5}
+  .nav .menu button.subbtn{cursor:default}
+  .nav .menu button.subbtn::after{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Dingo Transport LLC home"><img src="../img/logo-white.png" alt="Dingo Transport LLC, Dodge City, KS" width="876" height="443"></a>
+    <ul class="menu" id="site-menu">
+      <li><a href="../">Home</a></li>
+      <li class="has-sub"><button class="subbtn" type="button" id="about-btn" aria-expanded="false">About</button>
+        <div class="sub">
+          <a href="../#services">Services</a>
+          <a href="../#teams">Teams</a>
+          <a href="../#coverage">Coverage</a>
+          <a href="../#fleet">Fleet</a>
+        </div>
+      </li>
+      <li><a href="../brokers/">For Brokers</a></li>
+      <li><a href="../drive/" aria-current="page">Drive for Dingo</a></li>
+      <li><a href="../#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn solid" href="tel:+16824109850">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="long">Dispatch&nbsp;</span>682.410.9850
+      </a>
+      <button class="burger" type="button" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero drive">
+  <div class="photo"><img src="../img/truck-cab.jpg" alt="Dingo Transport unit 449, a white sleeper tractor with the Dingo logo on the door"></div>
+  <div class="wrap">
+    <div>
+      <p class="label">Now hiring &middot; Class A CDL drivers</p>
+      <h1><span><i>Drive for Dingo.</i></span><span class="hollow"><i>Run with the pack.</i></span></h1>
+    </div>
+    <div class="foot">
+      <p>Team and solo seats. Over the road and regional work. 53 foot dry vans hauling U.S. Mail and expedited freight out of Dodge City, Kansas.</p>
+      <div class="cta">
+        <a class="btn solid" href="tel:+16824109850">Call to apply 682.410.9850</a>
+        <a class="btn ghost" href="#crews">Team or solo?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>06</b><span>Trucks in the fleet</span></div>
+    <div class="stat"><b>04</b><span>Team trucks</span></div>
+    <div class="stat"><b>02</b><span>Solo trucks</span></div>
+    <div class="stat"><b>53'</b><span>Dry vans only</span></div>
+  </div>
+</div>
+
+<section class="light" id="work">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="label">The work</p>
+        <h2>What you'll haul</h2>
+      </div>
+      <p class="lede">Dingo Transport is a small over the road carrier. We keep the freight simple so drivers can focus on running safe and on time.</p>
+    </div>
+    <div class="rows">
+      <div class="row">
+        <h3>Dry van only</h3>
+        <p>Every load rides in a 53 foot dry van. No reefer units to watch and no flatbed loads to strap or tarp.</p>
+        <span class="tag">53' dry van</span>
+      </div>
+      <div class="row">
+        <h3>U.S. Mail</h3>
+        <p>Mail contracts are the core of what we haul, along with general merchandise and household goods.</p>
+        <span class="tag">Core lane</span>
+      </div>
+      <div class="row">
+        <h3>OTR or regional</h3>
+        <p>We offer both. Run over the road across the country, or tell us you are looking for regional work and we will talk about what fits.</p>
+        <span class="tag">Your call</span>
+      </div>
+      <div class="row">
+        <h3>Six trucks</h3>
+        <p>You are a name here, not a truck number. When you call, you reach the people who run the company.</p>
+        <span class="tag">Small fleet</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="crews">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="label">Open seats</p>
+        <h2>Two ways to run</h2>
+      </div>
+      <p class="lede">You can run as a team or run solo. Here is the difference, so you know what you are signing up for.</p>
+    </div>
+    <div class="crew">
+      <article>
+        <div class="count"><h3>Team drivers</h3></div>
+        <p>You and a co driver share one truck. While one of you drives, the other sleeps, then you switch. The truck keeps moving, so you turn loads faster and get more of them done.</p>
+        <div class="clock" aria-label="Illustration: a team truck drives for most of a 24 hour day, alternating between two drivers">
+          <div class="bar"><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="off"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="off"></i></div>
+          <div class="key"><span class="ka">You drive</span><span class="kb">Co driver drives</span><span class="ko">Fuel and stops</span></div>
+        </div>
+        <p class="ask">Have a co driver? Bring them on board with you. Open to teaming up? Tell us when you call.</p>
+      </article>
+      <article>
+        <div class="count"><h3>Solo drivers</h3></div>
+        <p>One driver, one truck. By law you can drive 11 hours, then you have to stop. Solo trucks take the loads that have room for that in the schedule.</p>
+        <div class="clock" aria-label="Illustration: a solo truck drives up to 11 hours of a 24 hour day, then rests">
+          <div class="bar"><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="a"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></div>
+          <div class="key"><span class="ka">Driving</span><span class="ko">Off duty and rest</span></div>
+        </div>
+        <p class="ask">Tell us if you want OTR or regional and we will go from there.</p>
+      </article>
+    </div>
+    <p class="fine">Why teams matter here: most of our U.S. Mail loads have to run straight through. Think Omaha, Nebraska to New Jersey with no overnight stop. Only a team truck can make that trip on time. Bars show one 24 hour day and are for illustration.</p>
+  </div>
+</section>
+
+<section class="light contact" id="apply">
+  <div class="wrap">
+    <p class="label">Apply by phone</p>
+    <h2>Ready to run?</h2>
+    <a class="phone" href="tel:+16824109850">682.410.9850</a>
+    <p class="lede" style="margin-top:22px">Call dispatch and tell us a little about yourself. Here is what we will ask.</p>
+    <div class="cgrid">
+      <div><h4>Where</h4><p class="big">Where you are based</p></div>
+      <div><h4>Work</h4><p class="big">OTR or regional</p></div>
+      <div><h4>Setup</h4><p class="big">Team or solo, and whether you have a co driver</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../"><img src="../img/logo-white.png" alt="Dingo Transport LLC" width="876" height="443"></a>
+    <nav aria-label="Footer">
+      <a href="../">Home</a><a href="../#services">Services</a><a href="../#coverage">Coverage</a><a href="../brokers/">For Brokers</a><a href="../drive/">Drive for Dingo</a><a href="../#contact">Contact</a>
+    </nav>
+    <span>&copy; 2026 Dingo Transport LLC &middot; Dodge City, KS</span>
+  </div>
+</footer>
+
+<script id="menu-js">
+(function(){
+  var nav=document.querySelector('.nav'),b=document.getElementById('menu-btn'),sb=document.getElementById('about-btn');
+  var set=function(o){nav.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')};
+  b.addEventListener('click',function(){set(!nav.classList.contains('open'))});
+  sb.addEventListener('click',function(){var li=sb.parentNode,o=!li.classList.contains('open');li.classList.toggle('open',o);sb.setAttribute('aria-expanded',o)});
+  nav.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){set(false);sb.parentNode.classList.remove('open')}});
+})();
+</script>
+</body>
+</html>
